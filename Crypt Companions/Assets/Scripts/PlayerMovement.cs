@@ -6,22 +6,27 @@ public class Example : MonoBehaviour
 {
     private CharacterController controller;
     private Vector3 playerVelocity;
+    private Animator animator;
 
     private bool isPlayerGrounded;
-    private float playerSpeed = 2.0f;
+    [SerializeField] private float playerSpeed = 5.5f;
     private float gravityValue = -9.81f;
+    bool isWalking;
 
-    private Animation walkingAnimation;
-    private Animation idleAnimation;
-
-    private void Start()
-    {
+    void Awake(){
         controller = gameObject.GetComponent<CharacterController>();
+        animator = gameObject.GetComponent<Animator>();
 
         //Ensuring the player will always have a character controller 
         if (controller == null)
         {
             controller = gameObject.AddComponent<CharacterController>();
+        }
+
+        // Add Animator if missing
+        if (animator == null)
+        {
+            animator = gameObject.AddComponent<Animator>();
         }
     }
 
@@ -35,41 +40,24 @@ public class Example : MonoBehaviour
 
         // Horizontal input
         Vector3 move = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
+        isWalking = move != Vector3.zero;
 
-        if (move != Vector3.zero)
+        if (isWalking)
         {
             transform.forward = move;
-
-
-            // Apply gravity
-            playerVelocity.y += gravityValue * Time.deltaTime;
-
-            // Combine horizontal and vertical movement
-            Vector3 finalMove = (move * playerSpeed) + (playerVelocity.y * Vector3.up);
-            controller.Move(finalMove * Time.deltaTime);
         }
+
+        // Apply gravity
+        playerVelocity.y += gravityValue * Time.deltaTime;
+
+        // Combine horizontal and vertical movement
+        Vector3 finalMove = (move * playerSpeed) + (playerVelocity.y * Vector3.up);
+        controller.Move(finalMove * Time.deltaTime);
         
-        Animations();
-    }
-
-    void Animations()
-    {
-        while (playerVelocity.x > 0 || playerVelocity.z > 0)
+        // Update animator parameter
+        if (animator != null)
         {
-            // Play walking animation
-            if (walkingAnimation != null)
-            {
-                walkingAnimation.Play();
-            }
-        }
-
-        while (playerVelocity.x <= 0 && playerVelocity.z <= 0)
-        {
-            // Play idle animation
-            if (idleAnimation != null)
-            {
-                idleAnimation.Play();
-            }
+            animator.SetBool("IsWalking", isWalking);
         }
     }
 }
