@@ -20,10 +20,18 @@
         {
             if (other.CompareTag("Enemy"))
             {
-                // Implement damage logic here
                 Debug.Log("Hit Enemy!");
+                
+                // Implement damage logic here
+                EnemyHealth enemyHealth = other.GetComponent<EnemyHealth>();
+                if (enemyHealth != null)
+                {
+                    enemyHealth.TakeDamage(damage);
+                }
+                
                 Destroy(gameObject);
             }
+            
             else if (other.CompareTag("Obstacle"))
             {
                 Destroy(gameObject);

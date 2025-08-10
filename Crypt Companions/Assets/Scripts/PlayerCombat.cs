@@ -1,27 +1,61 @@
 using UnityEngine;
+using System.Collections;
 
 public class PlayerCombat : MonoBehaviour
 {
-    [SerializeField] private GameObject arrowPrefab;
+    [SerializeField] private GameObject projectilePrefab;
     [SerializeField] private Transform firePoint;
-    
+    private bool isShooting = false;
+    private Animator animator;
+
+    void Awake()
+    {
+        animator = GetComponent<Animator>();
+    }
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space)) // Needs to be changed to R2/right-click
+        if (Input.GetKeyDown(KeyCode.Space) && !isShooting) // Needs to be changed to R2/right-click
         {
+            //Implement shooting animation here 
+            if (animator != null)
+            {
+                animator.SetTrigger("shooting" ); 
+            }
+
             Shoot();
+
         }
     }
     
     private void Shoot()
     {
-        if (arrowPrefab != null && firePoint != null)
+        if (projectilePrefab != null && firePoint != null)
         {
-            GameObject arrow = Instantiate(arrowPrefab, firePoint.position, firePoint.rotation * arrowPrefab.transform.rotation);
+            StartCoroutine(ShootMultipleProjectiles());
         }
         else
         {
-            Debug.LogWarning("Arrow prefab or fire point is not set.");
+            Debug.LogWarning("Arrow prefab or fire point is not set");
         }
+    }
+    
+    IEnumerator ShootMultipleProjectiles()
+    {
+        isShooting = true;
+        
+        for (int i = 0; i < 3; i++)
+        {
+            // Spawn one arrow
+            if (projectilePrefab != null && firePoint != null)
+            {
+                GameObject arrow = Instantiate(projectilePrefab, firePoint.position, firePoint.rotation * projectilePrefab.transform.rotation);
+            }
+        
+            // Wait before next shot
+            yield return new WaitForSeconds(0.2f); // Adjust timing as needed
+        }
+        
+        yield return new WaitForSeconds(0.25f);
+        isShooting = false;
     }
 }
