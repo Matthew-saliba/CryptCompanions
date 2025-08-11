@@ -289,37 +289,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -6617631398587751468, guid: 0227b189439ff2d4b95b55f3106feba3, type: 3}
---- !u!1 &479517572
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 479517573}
-  m_Layer: 0
-  m_Name: FiringPoint
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &479517573
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 479517572}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.056, z: 1}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1927194338}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &592145869 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5442435502367631612, guid: d227a020902e8f64b8144160a826e2e8, type: 3}
@@ -1002,12 +971,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 2947439681904874897, guid: d227a020902e8f64b8144160a826e2e8, type: 3}
   m_PrefabInstance: {fileID: 7922246265922402033}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &1927194338 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2570632256458903339, guid: d227a020902e8f64b8144160a826e2e8, type: 3}
-  m_PrefabInstance: {fileID: 7922246265922402033}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1927194339
+--- !u!114 &1927194345
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1016,11 +980,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1927194331}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 980c9a2987865e54b8b61354f5d424c8, type: 3}
+  m_Script: {fileID: 11500000, guid: f43a8a990f934b8c8b6f1434daf646af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projectilePrefab: {fileID: 7082327730243266051, guid: 542e2cfc5c0b1be4bac93ac9ea5b9401, type: 3}
-  firePoint: {fileID: 479517573}
+  startingHealth: 100
+  healFlask: 1
+  healAmount: 20
 --- !u!1001 &5214212440185120835
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1143,14 +1108,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects:
-    - targetCorrespondingSourceObject: {fileID: 2570632256458903339, guid: d227a020902e8f64b8144160a826e2e8, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 479517573}
+    m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 2947439681904874897, guid: d227a020902e8f64b8144160a826e2e8, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1927194339}
+      addedObject: {fileID: 1927194345}
   m_SourcePrefab: {fileID: 100100000, guid: d227a020902e8f64b8144160a826e2e8, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:

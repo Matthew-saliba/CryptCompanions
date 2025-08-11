@@ -1,7 +1,7 @@
 using UnityEngine;
 using System.Collections;
 
-public class PlayerCombat : MonoBehaviour
+public class PlayerRanged : MonoBehaviour
 {
     [SerializeField] private GameObject projectilePrefab;
     [SerializeField] private Transform firePoint;
@@ -19,7 +19,7 @@ public class PlayerCombat : MonoBehaviour
             //Implement shooting animation here 
             if (animator != null)
             {
-                animator.SetTrigger("shooting" ); 
+                animator.SetTrigger("Shoot" ); 
             }
 
             Shoot();

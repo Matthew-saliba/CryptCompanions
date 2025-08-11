@@ -1,27 +1,9 @@
 using UnityEngine;
-
-public class EnemyHealth : MonoBehaviour
+public class EnemyHealth : Health
 {
-    [SerializeField] private int startingHealth = 100;
-    private int currentHealth;
-
-    void Awake()
+    protected override void Die()
     {
-        currentHealth = startingHealth;
-    }
-
-    public void TakeDamage(int damage)
-    {
-        currentHealth -= damage;
-        if(currentHealth <= 0)
-        {
-            Die();
-        }
-        Debug.Log("Enemy took damage: " + damage + ", Current Health: " + currentHealth);
-    }
-
-    void Die()
-    {
-        Destroy(this.gameObject);
+        Debug.Log("Enemy died!");
+        Destroy(gameObject);
     }
 }
