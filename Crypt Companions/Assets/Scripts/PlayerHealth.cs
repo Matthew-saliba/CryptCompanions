@@ -16,6 +16,8 @@ public class PlayerHealth : Health
     {
         Debug.Log("Player died! Game over logic here.");
         // Add game over logic, respawn, etc.
+        //For temporary purposes, we can just destroy the player object
+        Destroy(this.gameObject);
     }
 
     private void HealPlayer()
