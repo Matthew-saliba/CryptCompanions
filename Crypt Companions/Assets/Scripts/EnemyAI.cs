@@ -1,16 +1,24 @@
+using System.Collections;
 using UnityEngine;
 
 public class EnemyAI : MonoBehaviour
 {
-    [SerializeField] private float detectionRange = 10f;
-    [SerializeField] private float attackRange = 2f;
-    [SerializeField] private float moveSpeed = 3f;
-    [SerializeField] private int damage = 10; // Damage dealt to player when attacking
+    [Header("Detection")]
+    [SerializeField] protected float detectionRange = 10f;
+    [SerializeField] protected float attackRange = 2f;
     
-    private Transform player;
-    private float distanceToPlayer;
+    [Header("Movement")]
+    [SerializeField] protected float moveSpeed = 3f;
     
-    private void Start()
+    [Header("Combat")]
+    [SerializeField] protected float attackCooldown = 1.5f;
+    [SerializeField] protected int attackDamage = 10;
+    
+    protected Transform player;
+    protected float distanceToPlayer;
+    protected bool canAttack = true;
+    
+    protected virtual void Start()
     {
         player = GameObject.FindWithTag("Player").transform;
         
@@ -18,45 +26,44 @@ public class EnemyAI : MonoBehaviour
         {
             Debug.LogError("Player not found! Make sure the player has the 'Player' tag.");
         }
-        
     }
     
-    private void Update()
+    protected virtual void Update()
     {
         if (player != null)
         {
-            // Calculate distance
             distanceToPlayer = Vector3.Distance(transform.position, player.position);
             
-            // Move toward player if in detection range but not in attack range 
             if (distanceToPlayer <= detectionRange && distanceToPlayer > attackRange)
             {
                 MoveTowardsPlayer();
             }
-            // Attack if in attack range
-            else if (distanceToPlayer <= attackRange)
+            else if (distanceToPlayer <= attackRange && canAttack)
             {
-                AttackPlayer();
+                StartCoroutine(PerformAttack());
             }
-            
         }
     }
     
-    private void MoveTowardsPlayer()
+    protected virtual void MoveTowardsPlayer()
     {
         Vector3 direction = (player.position - transform.position).normalized;
         transform.position += direction * moveSpeed * Time.deltaTime;
         
-        //Rotate to face the player
+        // Rotate to face the player
         Quaternion lookRotation = Quaternion.LookRotation(direction);
         transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, Time.deltaTime * 5f);
     }
     
-    private void AttackPlayer()
+    protected virtual IEnumerator PerformAttack()
     {
-        // Implement attack logic here, e.g., deal damage to player
-        Debug.Log("Enemy attacks the player!");
-        // You can call a method on the player's health script to apply damage
-        player.GetComponent<PlayerHealth>().TakeDamage(damage);
+        canAttack = false;
+        
+        // Basic attack - override in subclasses for specific behavior
+        Debug.Log(gameObject.name + " attacks the player!");
+        player.GetComponent<PlayerHealth>().TakeDamage(attackDamage);
+        
+        yield return new WaitForSeconds(attackCooldown);
+        canAttack = true;
     }
 }

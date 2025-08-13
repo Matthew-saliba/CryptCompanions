@@ -239,40 +239,6 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 222840832}
   m_SourcePrefab: {fileID: 100100000, guid: 0227b189439ff2d4b95b55f3106feba3, type: 3}
---- !u!1 &198269496 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2651381396355520161, guid: 5e87c1b6e79e30c4c82abb56e85537f2, type: 3}
-  m_PrefabInstance: {fileID: 5214212440185120835}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &198269500
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 198269496}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4b3f76a95426ca4c9bbdf92b7934ebc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  startingHealth: 100
---- !u!114 &198269504
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 198269496}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 43cdfb902ef4a7b4fb89191caf24246f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  detectionRange: 10
-  attackRange: 2
-  moveSpeed: 3
-  damage: 10
 --- !u!1 &222840830 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 0227b189439ff2d4b95b55f3106feba3, type: 3}
@@ -2130,10 +2096,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Skeleton_Warrior
       objectReference: {fileID: 0}
-    - target: {fileID: 2651381396355520161, guid: 5e87c1b6e79e30c4c82abb56e85537f2, type: 3}
-      propertyPath: m_TagString
-      value: Enemy
-      objectReference: {fileID: 0}
     - target: {fileID: 3422817053003336731, guid: 5e87c1b6e79e30c4c82abb56e85537f2, type: 3}
       propertyPath: m_LocalPosition.x
       value: 10.14
@@ -2174,20 +2136,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6148931969895484697, guid: 5e87c1b6e79e30c4c82abb56e85537f2, type: 3}
-      propertyPath: m_Constraints
-      value: 80
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 2651381396355520161, guid: 5e87c1b6e79e30c4c82abb56e85537f2, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 198269500}
-    - targetCorrespondingSourceObject: {fileID: 2651381396355520161, guid: 5e87c1b6e79e30c4c82abb56e85537f2, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 198269504}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5e87c1b6e79e30c4c82abb56e85537f2, type: 3}
 --- !u!1001 &7922246265922402033
 PrefabInstance:
