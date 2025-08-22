@@ -5,11 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e81c56bf-7e50-4d4a-9c73-70796368ab28" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/EnemyWeapon.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/EnemyWeapon.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Crypt Companions/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Crypt Companions/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/SkeletonWarriorAnimator.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/SkeletonWarriorAnimator.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/KayKit_Skeletons/characters/fbx/Skeleton_Warrior.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/KayKit_Skeletons/characters/fbx/Skeleton_Warrior.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Skeleton_Warrior.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Skeleton_Warrior.prefab.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/TestingScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/TestingScene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/EnemyAI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/EnemyAI.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/MeleeEnemyAI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MeleeEnemyAI.cs" afterDir="false" />
@@ -122,6 +120,9 @@
       <workItem from="1755614742169" duration="786000" />
       <workItem from="1755722964281" duration="4479000" />
       <workItem from="1755729970607" duration="5404000" />
+      <workItem from="1755898951623" duration="4000" />
+      <workItem from="1755898961918" duration="38000" />
+      <workItem from="1755899326232" duration="260000" />
     </task>
     <servers />
   </component>

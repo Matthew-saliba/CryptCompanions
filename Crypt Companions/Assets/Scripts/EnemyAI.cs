@@ -75,7 +75,7 @@ public class EnemyAI : MonoBehaviour
         // Stop walking animation when idle
         if (animator != null)
         {
-            animator.SetBool("IsWalking", false);
+            animator.SetBool("isWalking", false);
         }
     }
     
@@ -102,6 +102,14 @@ public class EnemyAI : MonoBehaviour
     
     protected virtual void HandleAttackingState()
     {
+        
+        // Stop walking animation during attack
+        if (animator != null)
+        {
+            animator.SetBool("isWalking", false);
+            Debug.Log("Set isWalking to false");
+        }
+        
         // Attack finished, decide next state
         if (canAttack)
         {
@@ -132,7 +140,7 @@ public class EnemyAI : MonoBehaviour
         // Set walking animation
         if (animator != null)
         {
-            animator.SetBool("IsWalking", true);
+            animator.SetBool("isWalking", true);
         }
 
         

@@ -19,8 +19,6 @@ public class MeleeEnemyAI : EnemyAI
             StartCoroutine(SpawnAnimation());
         }
         Debug.Log(gameObject.name + " spawns with animation for " + spawnAnimationLength + " seconds.");
-        // Here you would typically trigger an animation, but for simplicity, we just log
-        StartCoroutine(SpawnAnimation());
     }
     private IEnumerator SpawnAnimation()
     {
