@@ -1,10 +1,17 @@
 ﻿using UnityEngine;
 public class PlayerHealth : Health
 {
-    [SerializeField] private int healFlask = 2; // Maximum times user can heal
-    [SerializeField] private int healAmount = 20; // Amount to heal when using the healing item
+    [SerializeField] private int healFlask; // Maximum times user can heal
+    [SerializeField] private int healAmount; // Amount to heal when using the healing item
 
-    void Update()
+    private void Awake()
+    {
+        currentHealth = PlayerData.CurrentHealth;
+        startingHealth = PlayerData.MaxHealth;
+        healFlask = PlayerData.HealFlasks;
+    }
+    
+    private void Update()
     {
         if (Input.GetKeyDown(KeyCode.H) && healFlask > 0)
         {

@@ -12,6 +12,7 @@ public class PlayerRanged : MonoBehaviour
     void Awake()
     {
         animator = GetComponent<Animator>();
+        arrows = PlayerData.Arrows;
     }
     private void Update()
     {
