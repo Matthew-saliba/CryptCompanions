@@ -6,11 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="e81c56bf-7e50-4d4a-9c73-70796368ab28" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Crypt Companions/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Crypt Companions/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Skeleton_Warrior.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Skeleton_Warrior.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/TestingScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/TestingScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/EnemyAI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/EnemyAI.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MeleeEnemyAI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MeleeEnemyAI.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerRanged.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerRanged.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -123,6 +119,8 @@
       <workItem from="1755898951623" duration="4000" />
       <workItem from="1755898961918" duration="38000" />
       <workItem from="1755899326232" duration="260000" />
+      <workItem from="1759474290410" duration="332000" />
+      <workItem from="1759474670340" duration="149000" />
     </task>
     <servers />
   </component>

@@ -7,6 +7,7 @@ public class PlayerRanged : MonoBehaviour
     [SerializeField] private Transform firePoint;
     private bool isShooting = false;
     private Animator animator;
+    private int arrows;
 
     void Awake()
     {
@@ -46,16 +47,26 @@ public class PlayerRanged : MonoBehaviour
         for (int i = 0; i < 3; i++)
         {
             // Spawn one arrow
-            if (projectilePrefab != null && firePoint != null)
+            if (projectilePrefab != null && firePoint != null && arrows > 0)
             {
                 GameObject arrow = Instantiate(projectilePrefab, firePoint.position, firePoint.rotation * projectilePrefab.transform.rotation);
+                arrows--;
             }
-        
             // Wait before next shot
             yield return new WaitForSeconds(0.2f); // Adjust timing as needed
         }
         
         yield return new WaitForSeconds(0.25f);
         isShooting = false;
+    }
+    
+    public void SetArrows(int count)
+    {
+        arrows = count;
+    }
+    
+    public int GetArrows()
+    {
+        return arrows;
     }
 }
