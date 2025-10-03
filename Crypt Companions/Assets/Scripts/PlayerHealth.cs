@@ -6,6 +6,7 @@ public class PlayerHealth : Health
 
     private void Awake()
     {
+        base.Awake();
         currentHealth = PlayerData.CurrentHealth;
         startingHealth = PlayerData.MaxHealth;
         healFlask = PlayerData.HealFlasks;
