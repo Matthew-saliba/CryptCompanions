@@ -1,8 +1,9 @@
 ﻿using UnityEngine;
-public class PlayerHealth : Health
+public class Player : Health
 {
     [SerializeField] private int healFlask; // Maximum times user can heal
     [SerializeField] private int healAmount; // Amount to heal when using the healing item
+    [SerializeField] private int gold;
 
     private void Awake()
     {
@@ -11,6 +12,7 @@ public class PlayerHealth : Health
         PlayerData.CurrentHealth = startingHealth;
         currentHealth = PlayerData.CurrentHealth;
         healFlask = PlayerData.HealFlasks;
+        gold = PlayerData.CurrentGold;
     }
     
     private void Update()
@@ -43,5 +45,25 @@ public class PlayerHealth : Health
         }
         healFlask--;
         Debug.Log("Healed! Current Health: " + currentHealth + ", Flasks remaining: " + healFlask);
+    }
+    
+    public void AddGold(int amount)
+    {
+        gold += amount;
+    }
+    
+    public void AddFlask(int amount)
+    {
+        healFlask += amount;
+    }
+    
+    public int GetGold()
+    {
+        return gold;
+    }
+    
+    public int GetFlask()
+    {
+        return healFlask;
     }
 }
