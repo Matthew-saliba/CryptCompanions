@@ -179,6 +179,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startingHealth: 100
+  gold: 10
 --- !u!114 &739443536512972930
 MonoBehaviour:
   m_ObjectHideFlags: 0
