@@ -18,10 +18,12 @@ public class PlayerMelee : MonoBehaviour
     
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            PerformMeleeAttack();
-        }
+        
+    }
+    
+    void OnPrimaryAttack()
+    {
+        PerformMeleeAttack();
     }
     
     private void PerformMeleeAttack()

@@ -7,17 +7,23 @@ public class PlayerHealth : Health
     private void Awake()
     {
         base.Awake();
-        currentHealth = PlayerData.CurrentHealth;
         startingHealth = PlayerData.MaxHealth;
+        PlayerData.CurrentHealth = startingHealth;
+        currentHealth = PlayerData.CurrentHealth;
         healFlask = PlayerData.HealFlasks;
     }
     
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.H) && healFlask > 0)
+         
+    }
+
+    void OnFlask()
+    {
+        if (healFlask > 0)
         {
             HealPlayer();
-        }   
+        }  
     }
 
     protected override void Die()

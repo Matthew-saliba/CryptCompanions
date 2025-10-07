@@ -29,12 +29,12 @@
                     enemyHealth.TakeDamage(damage);
                 }
                 
-                Destroy(gameObject);
+                Destroy(this.gameObject);
             }
             
             else if (other.CompareTag("Obstacle"))
             {
-                Destroy(gameObject);
+                Destroy(this.gameObject);
             }
         }
         

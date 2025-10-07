@@ -16,7 +16,12 @@ public class PlayerRanged : MonoBehaviour
     }
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space) && !isShooting) // Needs to be changed to R2/right-click
+        
+    }
+
+    void OnSecondaryAttack()
+    {
+        if (!isShooting) 
         {
             //Implement shooting animation here 
             if (animator != null)
@@ -26,7 +31,7 @@ public class PlayerRanged : MonoBehaviour
 
             Shoot();
 
-        }
+        }  
     }
     
     private void Shoot()
