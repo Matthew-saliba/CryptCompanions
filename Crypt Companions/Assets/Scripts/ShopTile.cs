@@ -22,9 +22,9 @@ public abstract class ShopTile : MonoBehaviour
         }
     }
 
-    void OnInteract()
+    void Update()
     {
-        if (playerInRange)
+        if (playerInRange && Input.GetKeyDown(KeyCode.E))
         {
             TryPurchase();
         }
