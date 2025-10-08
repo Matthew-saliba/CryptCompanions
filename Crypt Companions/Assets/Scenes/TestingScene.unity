@@ -19226,6 +19226,7 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8d0c6fd72b025fd458294bcc30daf399, type: 3}
+<<<<<<< Updated upstream
 --- !u!1 &1927194331 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2947439681904874897, guid: d227a020902e8f64b8144160a826e2e8, type: 3}
@@ -19246,6 +19247,8 @@ MonoBehaviour:
   startingHealth: 100
   healFlask: 1
   healAmount: 20
+=======
+>>>>>>> Stashed changes
 --- !u!4 &1930874198 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6971256798874024363, guid: 0737080c0fed1c1479ad245fa5247791, type: 3}
@@ -22102,25 +22105,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2869361971287411548, guid: d227a020902e8f64b8144160a826e2e8, type: 3}
-      propertyPath: m_Radius
-      value: 0.75
-      objectReference: {fileID: 0}
     - target: {fileID: 2947439681904874897, guid: d227a020902e8f64b8144160a826e2e8, type: 3}
       propertyPath: m_Name
       value: RogueHooded
       objectReference: {fileID: 0}
-    - target: {fileID: 2947439681904874897, guid: d227a020902e8f64b8144160a826e2e8, type: 3}
-      propertyPath: m_TagString
-      value: Player
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 2947439681904874897, guid: d227a020902e8f64b8144160a826e2e8, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1927194345}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d227a020902e8f64b8144160a826e2e8, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:

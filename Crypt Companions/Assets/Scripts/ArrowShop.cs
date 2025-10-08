@@ -1,7 +1,4 @@
 ﻿using UnityEngine;
-
-namespace DefaultNamespace
-{
     public class ArrowShop : ShopTile
     {
         protected override void TryPurchase()
@@ -21,4 +18,3 @@ namespace DefaultNamespace
             }
         }
     }
-}

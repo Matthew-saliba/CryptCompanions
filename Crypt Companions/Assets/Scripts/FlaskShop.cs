@@ -1,7 +1,4 @@
 ﻿using UnityEngine;
-
-namespace DefaultNamespace
-{
     public class FlaskShop : ShopTile
     {
         protected override void TryPurchase()
@@ -20,4 +17,3 @@ namespace DefaultNamespace
             }
         }
     }
-}
