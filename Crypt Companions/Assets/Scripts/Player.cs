@@ -81,6 +81,11 @@ public class Player : Health
         return healFlask;
     }
     
+    public int GetCurrentHealth()
+    {
+        return currentHealth;
+    }
+    
     
     public void SetCurrentInteractable(IInteractable interactable)
     {

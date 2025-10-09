@@ -5,13 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e81c56bf-7e50-4d4a-9c73-70796368ab28" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/IInteractable.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/IInteractable.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/LevelCircle.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/LevelCircle.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Crypt Companions/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Crypt Companions/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ArrowShop.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ArrowShop.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/FlaskShop.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/FlaskShop.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ShopTile.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ShopTile.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -143,6 +142,7 @@
       <workItem from="1759836615261" duration="72000" />
       <workItem from="1759956919681" duration="30000" />
       <workItem from="1760007511448" duration="1667000" />
+      <workItem from="1760032384444" duration="412000" />
     </task>
     <servers />
   </component>
