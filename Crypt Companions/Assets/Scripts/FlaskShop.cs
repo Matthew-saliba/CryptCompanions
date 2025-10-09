@@ -4,14 +4,12 @@ namespace DefaultNamespace
 {
     public class FlaskShop : ShopTile
     {
-        protected override void TryPurchase()
+        protected override void TryPurchase(Player player)
         {
-            GameObject player = GameObject.FindWithTag("Player");
-            Player playerScript = player.GetComponent<Player>();
-            if (playerScript.GetGold() >= itemCost)
+            if (player.GetGold() >= itemCost)
             {
-                playerScript.AddGold(-itemCost);
-                playerScript.AddFlask(1);
+                player.AddGold(-itemCost);
+                player.AddFlask(1);
                 Debug.Log("Flask purchased!");
             }
             else

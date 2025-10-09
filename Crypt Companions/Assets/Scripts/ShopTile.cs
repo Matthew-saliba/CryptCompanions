@@ -1,16 +1,20 @@
 using UnityEngine;
 
-public abstract class ShopTile : MonoBehaviour
+public abstract class ShopTile : MonoBehaviour, IInteractable
 {
     [SerializeField] protected int itemCost;
-
-    private bool playerInRange;
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
         {
-            playerInRange = true;
+            // CHANGED: Tell the player this shop can be interacted with
+            Player player = other.GetComponent<Player>();
+            if (player != null)
+            {
+                player.SetCurrentInteractable(this);
+                Debug.Log($"Entered {GetType().Name}. Press Interact to buy!");
+            }
         }
     }
 
@@ -18,17 +22,18 @@ public abstract class ShopTile : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            playerInRange = false;
+            Player player = other.GetComponent<Player>();
+            if (player != null)
+            {
+                player.ClearCurrentInteractable(this);
+            }
         }
     }
-
-    void Update()
+    
+    public void Interact(Player player)
     {
-        if (playerInRange && Input.GetKeyDown(KeyCode.E))
-        {
-            TryPurchase();
-        }
+        TryPurchase(player);
     }
-
-    protected abstract void TryPurchase();
+    
+    protected abstract void TryPurchase(Player player);
 }
