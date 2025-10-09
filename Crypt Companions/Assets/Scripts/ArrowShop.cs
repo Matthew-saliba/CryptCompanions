@@ -4,14 +4,12 @@ namespace DefaultNamespace
 {
     public class ArrowShop : ShopTile
     {
-        protected override void TryPurchase()
+        protected override void TryPurchase(Player player)
         {
-            GameObject player = GameObject.FindWithTag("Player");
-            Player playerScript = player.GetComponent<Player>();
             PlayerRanged playerRanged = player.GetComponent<PlayerRanged>();
-            if (playerScript.GetGold() >= itemCost)
+            if (player.GetGold() >= itemCost)
             {
-                playerScript.AddGold(-itemCost);
+                player.AddGold(-itemCost);
                 playerRanged.AddArrows(30);
                 Debug.Log("Arrows purchased!");
             }

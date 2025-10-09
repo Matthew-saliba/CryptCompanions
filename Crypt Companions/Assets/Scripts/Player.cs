@@ -4,6 +4,8 @@ public class Player : Health
     [SerializeField] private int healFlask; // Maximum times user can heal
     [SerializeField] private int healAmount; // Amount to heal when using the healing item
     [SerializeField] private int gold;
+    
+    private IInteractable currentInteractable;
 
     private void Awake()
     {
@@ -18,6 +20,18 @@ public class Player : Health
     private void Update()
     {
          
+    }
+    
+    void OnInteract()
+    {
+        if (currentInteractable != null)
+        {
+            currentInteractable.Interact(this);
+        }
+        else
+        {
+            Debug.Log("Nothing to interact with!");
+        }
     }
 
     void OnFlask()
@@ -65,5 +79,19 @@ public class Player : Health
     public int GetFlask()
     {
         return healFlask;
+    }
+    
+    
+    public void SetCurrentInteractable(IInteractable interactable)
+    {
+        currentInteractable = interactable;
+    }
+    
+    public void ClearCurrentInteractable(IInteractable interactable)
+    {
+        if (currentInteractable == interactable)
+        {
+            currentInteractable = null;
+        }
     }
 }
