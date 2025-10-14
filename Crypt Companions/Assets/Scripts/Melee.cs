@@ -10,7 +10,7 @@ public class Melee : MonoBehaviour
             Debug.Log("Hit enemy with melee!");
             
             // Implement damage logic here
-            Enemy enemyHealth = other.GetComponent<Enemy>();
+            EnemyHealth enemyHealth = other.GetComponent<EnemyHealth>();
             if (enemyHealth != null)
             {
                 enemyHealth.TakeDamage(damage);

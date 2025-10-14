@@ -11,7 +11,7 @@
             if (other.CompareTag("Player"))
             {
                 Debug.Log("Player detected - dealing damage!");
-                other.GetComponent<Player>().TakeDamage(damage);
+                other.GetComponent<PlayerHealth>().TakeDamage(damage);
             }
             else
             {

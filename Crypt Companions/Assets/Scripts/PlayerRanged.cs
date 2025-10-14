@@ -66,9 +66,9 @@ public class PlayerRanged : MonoBehaviour
         isShooting = false;
     }
     
-    public void AddArrows(int count)
+    public void SetArrows(int count)
     {
-        arrows += count;
+        arrows = count;
     }
     
     public int GetArrows()

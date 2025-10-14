@@ -42,15 +42,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 94c2ca1c6876a764596930942aebc98a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 73.60072
+      value: 12.72
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 94c2ca1c6876a764596930942aebc98a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.049999714
+      value: 0.66
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 94c2ca1c6876a764596930942aebc98a, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.9761584
+      value: 1.07
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 94c2ca1c6876a764596930942aebc98a, type: 3}
       propertyPath: m_LocalRotation.w
@@ -86,7 +86,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 94c2ca1c6876a764596930942aebc98a, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 94c2ca1c6876a764596930942aebc98a, type: 3}
       propertyPath: m_TagString
@@ -188,7 +188,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startingHealth: 100
-  gold: 15
 --- !u!114 &859630031396435105
 MonoBehaviour:
   m_ObjectHideFlags: 0
