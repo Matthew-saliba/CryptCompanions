@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8337301138177796954}
   m_Layer: 0
   m_Name: wall_broken
-  m_TagString: Untagged
+  m_TagString: Destructable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -26,7 +26,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4537098928402262868}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.5, y: -0.50000006, z: -0.50000006, w: 0.49999988}
+  m_LocalRotation: {x: -0.5, y: -0.5, z: -0.5, w: 0.5}
   m_LocalPosition: {x: 136.04, y: 0.02, z: -56.47}
   m_LocalScale: {x: 136.85, y: 100, z: 100}
   m_ConstrainProportionsScale: 0

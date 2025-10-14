@@ -1,8 +1,11 @@
 ﻿using UnityEngine;
-public class PlayerHealth : Health
+public class Player : Health
 {
     [SerializeField] private int healFlask; // Maximum times user can heal
     [SerializeField] private int healAmount; // Amount to heal when using the healing item
+    [SerializeField] private int gold;
+    
+    private IInteractable currentInteractable;
 
     private void Awake()
     {
@@ -11,11 +14,24 @@ public class PlayerHealth : Health
         PlayerData.CurrentHealth = startingHealth;
         currentHealth = PlayerData.CurrentHealth;
         healFlask = PlayerData.HealFlasks;
+        gold = PlayerData.CurrentGold;
     }
     
     private void Update()
     {
          
+    }
+    
+    void OnInteract()
+    {
+        if (currentInteractable != null)
+        {
+            currentInteractable.Interact(this);
+        }
+        else
+        {
+            Debug.Log("Nothing to interact with!");
+        }
     }
 
     void OnFlask()
@@ -43,5 +59,44 @@ public class PlayerHealth : Health
         }
         healFlask--;
         Debug.Log("Healed! Current Health: " + currentHealth + ", Flasks remaining: " + healFlask);
+    }
+    
+    public void AddGold(int amount)
+    {
+        gold += amount;
+    }
+    
+    public void AddFlask(int amount)
+    {
+        healFlask += amount;
+    }
+    
+    public int GetGold()
+    {
+        return gold;
+    }
+    
+    public int GetFlask()
+    {
+        return healFlask;
+    }
+    
+    public int GetCurrentHealth()
+    {
+        return currentHealth;
+    }
+    
+    
+    public void SetCurrentInteractable(IInteractable interactable)
+    {
+        currentInteractable = interactable;
+    }
+    
+    public void ClearCurrentInteractable(IInteractable interactable)
+    {
+        if (currentInteractable == interactable)
+        {
+            currentInteractable = null;
+        }
     }
 }

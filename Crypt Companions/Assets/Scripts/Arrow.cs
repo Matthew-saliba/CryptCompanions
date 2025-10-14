@@ -23,7 +23,7 @@
                 Debug.Log("Hit Enemy!");
                 
                 // Implement damage logic here
-                EnemyHealth enemyHealth = other.GetComponent<EnemyHealth>();
+                Enemy enemyHealth = other.GetComponent<Enemy>();
                 if (enemyHealth != null)
                 {
                     enemyHealth.TakeDamage(damage);

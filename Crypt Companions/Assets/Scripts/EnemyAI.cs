@@ -155,7 +155,7 @@ public class EnemyAI : MonoBehaviour
         
         // Basic attack - override in subclasses for specific behavior
         Debug.Log(gameObject.name + " attacks the player!");
-        player.GetComponent<PlayerHealth>().TakeDamage(attackDamage);
+        player.GetComponent<Player>().TakeDamage(attackDamage);
         
         yield return new WaitForSeconds(attackCooldown);
         canAttack = true;
